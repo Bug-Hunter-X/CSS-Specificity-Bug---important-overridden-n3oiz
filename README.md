@@ -1,0 +1,1 @@
+This repository demonstrates a subtle bug in CSS related to specificity and the `!important` declaration.  The bug arises when a more specific selector overrides an `!important` declaration, leading to unexpected behavior. The solution provides a way to understand and address such issues by carefully considering selector specificity.
