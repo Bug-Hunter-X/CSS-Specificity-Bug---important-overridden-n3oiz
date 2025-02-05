@@ -1,0 +1,39 @@
+To solve this issue, you can adjust your CSS to either remove the `!important` declaration or increase the specificity of the selector using `!important`:
+
+**Option 1: Remove `!important`**
+
+The cleanest way is to avoid `!important` wherever possible. You can restructure your CSS to avoid conflicts:
+
+```css
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red;
+}
+
+.parent .child {
+  color: green;
+}
+```
+
+**Option 2: Increase Specificity with `!important` (Use cautiously)**
+
+If you absolutely need the `!important` declaration, increase its specificity to ensure it overrides the other declaration:
+
+```css
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red !important;
+}
+
+.parent .child {
+  color: green !important; /* Increased specificity */
+}
+```
+
+Remember to use `!important` sparingly, as it can make CSS harder to maintain and debug in the long run.  Prioritizing well-structured CSS is generally preferred.
